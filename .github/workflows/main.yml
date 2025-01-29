@@ -3,7 +3,7 @@ name: Build and Release Electron App
 on:
   push:
     tags:
-      - "v*"  # Läuft nur, wenn ein Tag mit 'v' gepusht wird (z.B. v1.0.0)
+      - "v*"
 
 jobs:
   build:
@@ -53,7 +53,10 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/**/*
+          files: |
+            dist/*.AppImage
+            dist/*.dmg
+            dist/*.exe
           tag_name: ${{ github.ref_name }}
           name: "Release ${{ github.ref_name }}"
           body_path: release-notes.md
