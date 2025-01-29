@@ -1,0 +1,66 @@
+{
+  "name": "youtube-downloader",
+  "version": "1.0.0",
+  "description": "Desktop App based on a WebApp with Yt-Dlp",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "productName": "YouTube Downloader",
+    "files": [
+      "assets/**/*",
+      "css/**/*",
+      "js/**/*",
+      "node_modules/**/*",
+      "index.html",
+      "main.js",
+      "!package.json",
+      "!icon_raw"
+    ],
+    "extraResources": [
+      {
+        "from": "binary/yt-dlp",
+        "to": "binary/yt-dlp",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "node_modules/ffmpeg-static/ffmpeg",
+        "to": "binary/ffmpeg"
+      }
+    ],
+    "appId": "com.orangekanguru.youtubedownloader",
+    "mac": {
+      "icon": "icons/icon.icns",
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "icon": "icons/icon.ico",
+      "target": "portable"
+    },
+    "linux": {
+      "icon": "icons/icon.png"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marvv90/youtube-downloader.git"
+  },
+  "author": "Marvin Schmidt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marvv90/youtube-downloader/issues"
+  },
+  "homepage": "https://github.com/Marvv90/youtube-downloader#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "bootstrap": "^5.3.3",
+    "ffmpeg-static": "^5.2.0"
+  },
+  "devDependencies": {
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8"
+  }
+}

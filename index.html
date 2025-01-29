@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
+    <link rel="stylesheet" href="./css/style.css?v=1">
+    <title>YouTube Loader pwr'd by Orange Kanguru</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="mb-3">
+                <div class="thumbnail">
+                    <img src="./assets/thumbnail.webp" data-selector="yt-cover" width="476" height="267">
+                    <p class="duration" data-selector="yt-duration">0:00</p>
+                </div>
+                <p class="title" data-selector="yt-title">Unbekannter Titel</p>
+                <p class="owner" data-selector="yt-owner">Unbekannt</p>
+            </div>
+            <hr>
+            <div class="mb-3">
+                <label for="inputUrl" class="form-label">YouTube Url:</label>
+                <input type="text" class="form-control" data-selector="yt-url" id="inputUrl">
+                <div id="urlHelp" class="form-text">https://www.youtube.com/watch?v=xxxxxx</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="format" class="form-label">Format:</label>
+                <select class="form-select" id="format" data-selector="yt-format">
+                    <option selected value="audio">Audio</option>
+                    <option value="video">Video</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-submit w-100 bg-orange" data-selector="submit-btn">
+                <i class="fa-solid fa-download me-2"></i>Herunterladen
+            </button>
+        </form>
+    </div>
+
+    <dialog data-selector="dialog-error"><i class="fa-solid fa-circle-exclamation text-danger me-2"></i><span>Keine Internetverbindung</span></dialog>
+    <dialog data-selector="dialog-loader"><div class="loader"></div></dialog>
+
+   <script src="js/script.js"></script>
+</body>
+</html>

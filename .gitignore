@@ -1,0 +1,9 @@
+# Build Files
+dist
+
+# OS X
+.DS_Store
+
+# NODE & NPM Files & Folders
+node_modules/
+package-lock.json
