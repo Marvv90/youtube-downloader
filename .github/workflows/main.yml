@@ -36,4 +36,4 @@ jobs:
             dist/**/*.AppImage
           body_path: release-notes.md
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
