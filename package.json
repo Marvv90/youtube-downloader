@@ -41,7 +41,9 @@
       "target": "portable"
     },
     "linux": {
-      "icon": "icons/icon.png"
+      "icon": "icons/icon.png",
+      "target": "AppImage",
+      "category": "Utility"
     }
   },
   "repository": {
