@@ -10,6 +10,9 @@
   },
   "build": {
     "productName": "YouTube Downloader",
+    "directories": {
+      "output": "dist"
+    },
     "files": [
       "assets/**/*",
       "css/**/*",
